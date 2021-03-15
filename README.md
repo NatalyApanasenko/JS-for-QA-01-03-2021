@@ -6,13 +6,12 @@ isLive (boolean value),
 someFunction(function type) - result of calling console.log('Some value'),
 comment: object which contain information about the authot - first name, last name and comment body.
 
-
-const post = {
+{code}
+ const post = {
     titleBody: 'Photo',
     author: 'Nataly',
     views: 89,
     isLive: 'true',
-
     someFunction: function () {
         console.log('Some value')
     },
@@ -22,6 +21,8 @@ const post = {
         commentBody: 'Photograph',
     }
 };
+
+{code}
 
 // Example
 const post = {
