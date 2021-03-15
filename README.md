@@ -6,7 +6,8 @@ isLive (boolean value),
 someFunction(function type) - result of calling console.log('Some value'),
 comment: object which contain information about the authot - first name, last name and comment body.
 
-{code}
+//
+
  const post = {
     titleBody: 'Photo',
     author: 'Nataly',
@@ -22,7 +23,7 @@ comment: object which contain information about the authot - first name, last na
     }
 };
 
-{code}
+
 
 // Example
 const post = {
