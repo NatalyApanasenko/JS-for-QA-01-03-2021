@@ -1,37 +1,98 @@
-1) Create object "post" which should contain following key:
-title body(string value),
-author(string value),
-views(number value),
-isLive (boolean value),
-someFunction(function type) - result of calling console.log('Some value'),
-comment: object which contain information about the authot - first name, last name and comment body.
+2.1 
 
-//
+let schedule = {};
 
- const post = {
-    titleBody: 'Photo',
-    author: 'Nataly',
-    views: 89,
-    isLive: 'true',
-    someFunction: function () {
-        console.log('Some value')
-    },
-    comment: {
-        firstName: 'Nataly',
-        lastName: 'Apanasenko',
-        commentBody: 'Photograph',
+const isEmpty = (obj) => {
+    for (let key in obj) {
+      return false;
     }
-};
+    return true;
+  }
 
+  console.log( isEmpty(schedule) ); 
+  schedule["8:30"] = "get up";
+  console.log( isEmpty(schedule) );
 
+2.2. 
 
-// Example
-const post = {
-titleBody: 'Some cool title',
-...
+function maxNumber (a, b) {
+return Math.max(a,b)
 }
-1.1 Get "comment body" key and "someFunction" value using dots and bracket notation
+  console.log(maxNumber (1, 2))
 
-1.2 Get the length of post object and write the script which should return the list of the properties values of a "post" object
+3.
 
-2. Write the function called "helloColleagues" which should accept two parameter "company" and "team" and should return the string with `I am working in "company" in amazing "team"` - use template string syntax to paramerize string value - ``
+let salaries = { 
+    workers: {
+    Mykola: 950,
+    Pavlo:  700, 
+    Petro:  800,
+    Helen: null
+    },
+    culcSumm: () => {
+        let result = 0; 
+        for (let key in salaries.workers){
+    //  if ((this.workers)[key] != null){
+            result += (salaries.workers)[key]
+    // } 
+        }
+        return result
+    },
+
+    topSalaries: function() {
+        let max = 0;
+        let name = null;
+
+        for (const [employee, salary] of Object.entries(salaries.workers))  {
+            if (max < salary){
+                max = salary;
+                name = employee;
+            }
+        }
+        // for (let key in this.workers) {
+        //     max = Math.max ((this.workers)[key], max);
+        
+        return `${name} has biggest salary of ${max}`;
+        // return max
+    }
+}
+console.log(salaries.culcSumm())
+console.log(salaries.topSalaries())
+
+
+4.
+
+let menu = { 
+      width: 200, 
+      height: 300, 
+      title: "My menu" 
+    };
+    
+    const multiplyNumeric = (obj) => {
+        for (let key in obj) {
+          if (typeof obj[key] == 'number') {
+            obj[key] *= 2;
+          }
+        }
+      }
+
+  multiplyNumeric(menu)
+
+  menu
+
+5. 
+
+function showStars(rows){
+    let star ='';
+    for (let row = 1; row <= rows; row++ ){
+           for(let i = 1; i <= rows - row ; i++) {
+            star += "\t";
+     } 
+     for (let a = 1; a <= row; a++){
+         star += '*\t\t';
+     }
+     console.log(star);
+     star = ""; 
+    }
+}
+   showStars(4)
